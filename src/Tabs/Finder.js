@@ -33,8 +33,11 @@ class Finder extends Component {
 
   }
 
-  stepChange(step) {
-    this.setState({ currentStep: step });
+  stepChange(step, override) {
+    if(override || step < this.state.currentStep){
+      this.setState({ currentStep: step });
+      return;
+    }
   }
 
   backBtn() {
@@ -47,7 +50,7 @@ class Finder extends Component {
   nextBtn() {
     console.log(this.state)
     if (this.state.currentStep < 5){
-      this.stepChange(this.state.currentStep + 1)
+      this.stepChange(this.state.currentStep + 1, true)
       this.updateButtons(false)
     }
     else
