@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import One from './FinderSteps/one';
 import {Two} from './FinderSteps/two';
 import Three from './FinderSteps/three';
+import Four from './FinderSteps/Four'
 
 class Finder extends Component {
 
@@ -116,7 +117,8 @@ class Finder extends Component {
             <Two stateupdate={this.updateState} buttonupdate={this.updateButtons}/></div>
             <div className={"tab-pane fade " + (this.state.currentStep === 3 ? "show active" : "")} id="three">
             <Three stateupdate={this.updateState} buttonupdate={this.updateButtons}/></div>
-            <div className={"tab-pane fade " + (this.state.currentStep === 4 ? "show active" : "")} id="four">4</div>
+            <div className={"tab-pane fade " + (this.state.currentStep === 4 ? "show active" : "")} id="four">
+            <Four stateupdate={this.updateState} buttonupdate={this.updateButtons}/></div>
             <div className={"tab-pane fade " + (this.state.currentStep === 5 ? "show active" : "")} id="five">5</div>
           </div>
         </div>
@@ -124,7 +126,7 @@ class Finder extends Component {
           {this.state.currentStep > 1 ? <a type="button"
           className="btn btn-dark"
           onClick={this.backBtn}>Back</a> : null}
-          <a type="button" className={"btn btn-dark" + (this.state.nexton ? "" : " disabled")}
+          <a type="button" className={"btn btn-dark" + (this.state.nexton || this.state.currentStep === 4 || this.state.currentStep == 5 ? "" : " disabled")}
           onClick={this.nextBtn}>{this.state.currentStep < 5 ? 'Next' : 'Finish'}</a>
         </div>
       </div>
