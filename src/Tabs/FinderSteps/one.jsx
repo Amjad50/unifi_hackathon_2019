@@ -11,7 +11,6 @@ class One extends Component {
     super(props);
 
     this.state = {
-      vals: [80, 100],
       age: 0,
       gender: ''
     }
@@ -24,10 +23,6 @@ class One extends Component {
 
 
   render() {
-    const railstyles = {
-      backgroundColor: 'black',
-      height: '10px'
-    };
     return (
       <div>
         <p>Choose your gender: </p>
