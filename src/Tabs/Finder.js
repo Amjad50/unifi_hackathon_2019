@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import One from './FinderSteps/one';
+import {Two} from './FinderSteps/two';
 
 class Finder extends Component {
 
@@ -48,7 +49,6 @@ class Finder extends Component {
   }
 
   nextBtn() {
-    console.log(this.state)
     if (this.state.currentStep < 5){
       this.stepChange(this.state.currentStep + 1, true)
       this.updateButtons(false)
@@ -111,7 +111,8 @@ class Finder extends Component {
           <div className="tab-content">
             <div className={"tab-pane fade " + (this.state.currentStep === 1 ? "show active" : "")}
              id="one"><One stateupdate={this.updateState} buttonupdate={this.updateButtons}/></div>
-            <div className={"tab-pane fade " + (this.state.currentStep === 2 ? "show active" : "")} id="two">2</div>
+            <div className={"tab-pane fade " + (this.state.currentStep === 2 ? "show active" : "")} id="two">
+            <Two stateupdate={this.updateState} buttonupdate={this.updateButtons}/></div>
             <div className={"tab-pane fade " + (this.state.currentStep === 3 ? "show active" : "")} id="three">3</div>
             <div className={"tab-pane fade " + (this.state.currentStep === 4 ? "show active" : "")} id="four">4</div>
             <div className={"tab-pane fade " + (this.state.currentStep === 5 ? "show active" : "")} id="five">5</div>
