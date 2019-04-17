@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import One from './FinderSteps/one';
 import {Two} from './FinderSteps/two';
+import Three from './FinderSteps/three';
 
 class Finder extends Component {
 
@@ -28,17 +29,17 @@ class Finder extends Component {
       //four
       addons: {
         tv: false,
-
       }
     }
 
   }
 
   stepChange(step, override) {
-    if(override || step < this.state.currentStep){
+    //TODO: change to normal after debugging
+    // if(override || step < this.state.currentStep){
       this.setState({ currentStep: step });
       return;
-    }
+    // }
   }
 
   backBtn() {
@@ -113,7 +114,8 @@ class Finder extends Component {
              id="one"><One stateupdate={this.updateState} buttonupdate={this.updateButtons}/></div>
             <div className={"tab-pane fade " + (this.state.currentStep === 2 ? "show active" : "")} id="two">
             <Two stateupdate={this.updateState} buttonupdate={this.updateButtons}/></div>
-            <div className={"tab-pane fade " + (this.state.currentStep === 3 ? "show active" : "")} id="three">3</div>
+            <div className={"tab-pane fade " + (this.state.currentStep === 3 ? "show active" : "")} id="three">
+            <Three stateupdate={this.updateState} buttonupdate={this.updateButtons}/></div>
             <div className={"tab-pane fade " + (this.state.currentStep === 4 ? "show active" : "")} id="four">4</div>
             <div className={"tab-pane fade " + (this.state.currentStep === 5 ? "show active" : "")} id="five">5</div>
           </div>
