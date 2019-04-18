@@ -60,7 +60,7 @@ class Finder extends Component {
   }
 
   finish() {
-    console.log('finished')
+    window.location = 'https://unifi.com.my/unifi-en/ijoin/registration_form_new.page'
   }
 
   updateButtons(next) {
@@ -77,7 +77,7 @@ class Finder extends Component {
     return (
       <div>
         <div className="container">
-          <div className="row mx-auto" style={{width: 400}}>
+          <div className="row mx-auto" style={{width: 500}}>
             <ul className="nav nav-pills nav-justify" id="myTab" role="tablist">
             {/* <div className="col"></div> */}
               <li className="col nav-item">
@@ -127,11 +127,12 @@ class Finder extends Component {
           </div>
         </div>
         <div>
-          {this.state.currentStep > 1 ? <a type="button"
-            className="btn btn-dark"
-            onClick={this.backBtn}>Back</a> : null}
-          <a type="button" className={"btn btn-dark" + (this.state.nexton || this.state.currentStep === 4 || this.state.currentStep == 5 ? "" : " disabled")}
-            onClick={this.nextBtn}>{this.state.currentStep < 5 ? 'Next' : 'Finish'}</a>
+          {this.state.currentStep > 1 ? <button type="button"
+            className="btn btn-secondary"
+            onClick={this.backBtn}>Back</button> : null}
+          <button type="button" role="button" href="#" className={"btn btn-secondary" + 
+          (this.state.nexton || this.state.currentStep === 4 || this.state.currentStep == 5 ? "" : " disabled")}
+            onClick={this.nextBtn}>{this.state.currentStep < 5 ? 'Next' : 'Finish'}</button>
         </div>
       </div>
     );

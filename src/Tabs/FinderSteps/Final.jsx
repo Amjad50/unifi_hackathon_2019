@@ -43,7 +43,7 @@ function genTable(data) {
         </tr>
         <tr>
           <td><h3>Price</h3></td>
-          <td><h3>{data.price} RM</h3></td>
+          <td><h3>{data.price} RM/month</h3></td>
         </tr>
       </tbody>
     </table>

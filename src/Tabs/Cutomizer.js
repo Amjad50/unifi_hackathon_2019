@@ -21,7 +21,7 @@ class Customizer extends Component {
   }
 
   finish() {
-
+    window.location = 'https://unifi.com.my/unifi-en/ijoin/registration_form_new.page'
   }
 
   calculatePrice() {
@@ -36,33 +36,38 @@ class Customizer extends Component {
         <div className="row">
           <br />
           <div className="col-8">
+          <br />
             <p>Quota: </p>
             <input type="checkbox" onChange={e => this.setState({ unlimited: e.target.checked })} /> unlimited
         <div className="slide-wrap" style={{ width: 50 + '%' }}>
               <SliderWithToolTip disabled={this.state.unlimited} dismin={10} max={100} step={10} onChange={(e) => this.setState({ quota: e })} />
             </div>
 
+            <br />
             <p>Download Speed: </p>
             <div className="slide-wrap" style={{ width: 50 + '%' }}>
               <SliderWithToolTip dismin={10} max={300} step={10} onChange={(e) => this.setState({ download: e })} />
             </div>
 
+            <br />
             <p>Upload Speed: </p>
             <div className="slide-wrap" style={{ width: 50 + '%' }}>
               <SliderWithToolTip dismin={10} max={300} step={10} onChange={(e) => this.setState({ upload: e })} />
             </div>
 
+            <br />
             <p>Calling Minutes : </p>
             <div className="slide-wrap" style={{ width: 50 + '%' }}>
               <SliderWithToolTip dismin={0} max={300} step={20} onChange={(e) => this.setState({ mins: e })} />
             </div>
 
+            <br />
             <p>SMS Messages : </p>
             <div className="slide-wrap" style={{ width: 50 + '%' }}>
               <SliderWithToolTip dismin={0} max={600} step={20} onChange={(e) => this.setState({ sms: e })} />
             </div>
           </div>
-          <div className="col-4">
+          <div className="col-4 mydiv">
             <br />
             <div className="finisher">
               <table>
@@ -93,18 +98,20 @@ class Customizer extends Component {
                   </tr>
                   <tr>
                     <td><h3>Price</h3></td>
-                    <td><h3>{this.calculatePrice()} RM</h3></td>
+                    <td><h3>{this.calculatePrice()} RM/month</h3></td>
                   </tr>
                 </tbody>
               </table>
+              <br />
+              <div>
+          <a type="button" className="btn btn-success"
+            onClick={this.finish}>Finish</a>
+        </div>
             </div>
           </div>
         </div>
 
-        <div>
-          <a type="button" className="btn btn-dark"
-            onClick={this.finish}>Finish</a>
-        </div>
+       
       </div>
     );
 
