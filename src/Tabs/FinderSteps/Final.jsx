@@ -18,22 +18,22 @@ function genTable(data) {
       <tbody>
         <tr>
           <td>quota</td>
-          <td>{data.quota}</td>
+          <td>{data.quota} GB</td>
         </tr>
         <tr>
           <td>Download Speed</td>
-          <td>{data.down}</td>
+          <td>{data.down} Gbps</td>
         </tr>
         <tr>
           <td>Upload Speed</td>
-          <td>{data.up}</td>
+          <td>{data.up} Gbps</td>
         </tr>
         <tr>
-          <td>Free Minutes calling</td>
-          <td>{data.minscalls}</td>
+          <td>Minutes calling</td>
+          <td>{data.minscalls} minutes</td>
         </tr>
         <tr>
-          <td>Free SMS</td>
+          <td>SMS</td>
           <td>{data.sms}</td>
         </tr>
         <tr>
