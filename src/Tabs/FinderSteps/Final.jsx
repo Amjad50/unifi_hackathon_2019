@@ -68,13 +68,13 @@ function predict(a) {
 
 
   if (a.mostUsedApps.indexOf('Youtube') !== -1 || a.mostUsedApps.indexOf('Games') !== -1 || a.mostUsedApps.indexOf('Netflex') !== -1) {
-    return new Data('unlimited', '100Mbps', '20Mbps', calls, msgs, a.addons.tv, 150)
+    return new Data('unlimited', '100Mbps', '20Mbps', calls, msgs, a.addons.TV, 150)
   }
 
   if (a.mostUsedApps.indexOf('Browser') !== -1 || a.mostUsedApps.indexOf('Mails') !== -1)
-    return new Data('20 GB', '30Mbps', '10Mbps', calls, msgs, a.addons.tv,50)
+    return new Data('20 GB', '30Mbps', '10Mbps', calls, msgs, a.addons.TV,50)
 
-  return new Data('unlimited', '100Mbps', '100Mbps', calls, msgs, a.addons.tv, 100)
+  return new Data('unlimited', '100Mbps', '100Mbps', calls, msgs, a.addons.TV, 100)
 }
 
 class Final extends Component {

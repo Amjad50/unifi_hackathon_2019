@@ -126,6 +126,7 @@ class Finder extends Component {
               <Final data={this.state} /></div>
           </div>
         </div>
+        <br/>
         <div>
           {this.state.currentStep > 1 ? <button type="button"
             className="btn btn-secondary"

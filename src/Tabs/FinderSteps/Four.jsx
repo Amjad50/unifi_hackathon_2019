@@ -7,7 +7,8 @@ class Four extends Component {
 
     this.state = {
       addons: {
-        tv: false,
+        TV: false,
+        '+1 year warranty': false,
       }
     }
   }

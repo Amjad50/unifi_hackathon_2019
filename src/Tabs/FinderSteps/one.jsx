@@ -27,7 +27,7 @@ class One extends Component {
       <div>
         <br />
         <p>Choose your gender: </p>
-        <select className="custom-select" id="gender" onChange={(e) => this.setState({ gender: e.target.value }, this.changed)}>
+        <select className="custom-select slide-wrap" id="gender" onChange={(e) => this.setState({ gender: e.target.value }, this.changed)}>
           <option value="">Choose...</option>
           <option value="male">male</option>
           <option value="female">female</option>
@@ -35,7 +35,7 @@ class One extends Component {
         <br />
         <br />
         <p>Choose your Age: </p>
-        <div className="slide-wrap" style={{ width: 50 + '%' }}>
+        <div className="slide-wrap">
           <SliderWithToolTip  min={5} max={60} step={1} onChange={(e) => this.setState({age: e}, this.changed)} />
         </div>
       </div>

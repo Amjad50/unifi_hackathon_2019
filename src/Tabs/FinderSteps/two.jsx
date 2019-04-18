@@ -38,7 +38,7 @@ class Two extends Component {
       <div>
         <br />
         <p>How many hours do you use the internet (Average): </p>
-        <input type="number" className="form-control" placeholder="Hours" onChange={(e) => this.setState({ usagePhours: parseInt(e.target.value) }, this.changed)}/>
+        <input type="number" className="form-control slide-wrap" placeholder="Hours" onChange={(e) => this.setState({ usagePhours: parseInt(e.target.value) }, this.changed)}/>
         <br />
         <br />
         <p>Choose the most 3 Applications that you use: </p>
