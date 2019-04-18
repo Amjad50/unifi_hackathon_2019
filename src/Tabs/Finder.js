@@ -3,6 +3,7 @@ import One from './FinderSteps/one';
 import {Two} from './FinderSteps/two';
 import Three from './FinderSteps/three';
 import Four from './FinderSteps/Four'
+import Final from './FinderSteps/Final'
 
 class Finder extends Component {
 
@@ -119,7 +120,8 @@ class Finder extends Component {
             <Three stateupdate={this.updateState} buttonupdate={this.updateButtons}/></div>
             <div className={"tab-pane fade " + (this.state.currentStep === 4 ? "show active" : "")} id="four">
             <Four stateupdate={this.updateState} buttonupdate={this.updateButtons}/></div>
-            <div className={"tab-pane fade " + (this.state.currentStep === 5 ? "show active" : "")} id="five">5</div>
+            <div className={"tab-pane fade " + (this.state.currentStep === 5 ? "show active" : "")} id="five">
+            <Final data={this.state}/></div>
           </div>
         </div>
         <div>
