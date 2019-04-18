@@ -135,6 +135,7 @@ class Finder extends Component {
           (this.state.nexton || this.state.currentStep === 4 || this.state.currentStep == 5 ? "" : " disabled")}
             onClick={this.nextBtn}>{this.state.currentStep < 5 ? 'Next' : 'Finish'}</button>
         </div>
+        <br/><br/><br/>
       </div>
     );
 

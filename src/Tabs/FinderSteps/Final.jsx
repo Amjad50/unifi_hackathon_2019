@@ -88,8 +88,8 @@ class Final extends Component {
     return (
       <div className="container">
         <br />
-        <div className="col-4 slide-wrap">
-          <div className="slide-wrap finisher">
+        <div className="col-4" style={{margin: 'auto'}}>
+          <div className="finisher"  style={{margin: 'auto'}}>
             <br />
             {
               genTable(predict(this.props.data))
