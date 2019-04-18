@@ -20,6 +20,7 @@ class Three extends Component {
   render() {
     return (
       <div>
+        <br />
         <p>How many times do you call someone per day (Average): </p>
         <input type="number" className="form-control" placeholder="Calls" onChange={(e) => this.setState({ callsPday: parseInt(e.target.value) }, this.changed)} />
         <br />

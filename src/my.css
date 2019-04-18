@@ -1,0 +1,10 @@
+.slide-wrap {
+    margin: auto
+}
+
+.finisher {
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, #f8ab05, #ee7202);
+    color: white;
+    padding: 50px 20px
+}

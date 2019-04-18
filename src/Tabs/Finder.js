@@ -37,10 +37,10 @@ class Finder extends Component {
   }
 
   stepChange(step, override) {
-    if(override || step < this.state.currentStep){
+    // if(override || step < this.state.currentStep){
     this.setState({ currentStep: step });
     return;
-    }
+    // }
   }
 
   backBtn() {
@@ -77,7 +77,7 @@ class Finder extends Component {
     return (
       <div>
         <div className="container">
-          <div className="row">
+          <div className="row mx-auto" style={{width: 400}}>
             <ul className="nav nav-pills nav-justify" id="myTab" role="tablist">
             {/* <div className="col"></div> */}
               <li className="col nav-item">

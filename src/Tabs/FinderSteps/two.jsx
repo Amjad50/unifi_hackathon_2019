@@ -36,6 +36,7 @@ class Two extends Component {
   render() {
     return (
       <div>
+        <br />
         <p>How many hours do you use the internet (Average): </p>
         <input type="number" className="form-control" placeholder="Hours" onChange={(e) => this.setState({ usagePhours: parseInt(e.target.value) }, this.changed)}/>
         <br />

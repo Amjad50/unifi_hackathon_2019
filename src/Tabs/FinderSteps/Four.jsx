@@ -25,6 +25,7 @@ class Four extends Component {
   render() {
     return (
       <div>
+        <br />
         <p>please choose some addons that you would like to have in your package: </p>
         <div className="btn-group-toggle" data-toggle="buttons">
           {
